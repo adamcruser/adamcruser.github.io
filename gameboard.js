@@ -18,7 +18,7 @@ function treasure(id){
         setTimeout(function(){ alert("YOU WIN!!! Play again 💪💰🥇"); }, 1000);
     }
     else if (count >= 7){
-        setTimeout(function(){ alert("YOU LOSE!!! Try again 😂😱😭"); }, 1000);
+        setTimeout(function(){ alert("YOU LOSE!!! Try again 😂😱😭"); }, 1000); window.location.reload(50)
     }
     else if (id === bombLocation){
         document.getElementById(id).innerHTML = "💣"
