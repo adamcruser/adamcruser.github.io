@@ -15,14 +15,17 @@ function treasure(id){
         document.getElementById("counter").innerHTML = count
     if (id === treasureLocation){
         document.getElementById(id).innerHTML = "🏆"
-        setTimeout(function(){ alert("YOU WIN!!! Play again 💪💰🥇"); }, 1000);
+
+        setTimeout(function(){ alert("YOU WIN!!! Play again 💪💰🥇");window.location.reload() }, 200);
+
     }
     else if (count >= 7){
-        setTimeout(function(){ alert("YOU LOSE!!! Try again 😂😱😭"); }, 1000); window.location.reload(50)
+        document.getElementById(id).innerHTML = "❌"
+        setTimeout(function(){ alert("YOU LOSE!!! Try again 😂😱😭");window.location.reload() }, 1000); setTimeout(200)()
     }
     else if (id === bombLocation){
         document.getElementById(id).innerHTML = "💣"
-        setTimeout(function(){ alert("YOU LOSE!!! Try again 😂😱😭"); }, 1000);
+        setTimeout(function(){ alert("YOU LOSE!!! Try again 😂😱😭");window.location.reload() }, 500);
     }else if (id !== treasureLocation && id !== bombLocation){
         document.getElementById(id).innerHTML = "❌"
 }
